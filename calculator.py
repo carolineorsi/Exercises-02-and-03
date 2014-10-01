@@ -16,7 +16,6 @@ def main():
             print "Not a valid operation"
             continue
 
-
         sym = symbols[user_tokens[0]]
         try:
             num1 = float(user_tokens[1])
@@ -36,7 +35,7 @@ def main():
             print sym(num1, num2)
 
         else:
-            print "Wrong input!"
+            print "Not a valid input"
 
 
 if __name__ == '__main__':
