@@ -13,8 +13,8 @@ def main():
             break
         else:
             sym = symbols[user_tokens[0]]
-            num1 = int(user_tokens[1])
-            num2 = int(user_tokens[2])
+            num1 = float(user_tokens[1])
+            num2 = float(user_tokens[2])
             print sym(num1, num2)
 
 
