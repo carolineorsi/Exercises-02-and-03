@@ -12,15 +12,27 @@ def main():
 
         if user_tokens[0] == "q":
             break
+        if user_tokens[0] not in symbols:
+            print "Not a valid operation"
+            continue
+
 
         sym = symbols[user_tokens[0]]
-        num1 = float(user_tokens[1])
+        try:
+            num1 = float(user_tokens[1])
+        except ValueError:
+            print("Not a valid input. Enter numbers.")
+            continue
 
         if len(user_tokens) == 2 and (user_tokens[0] == "square" or user_tokens[0] == "cube"):
             print sym(num1)            
 
         elif len(user_tokens) == 3:
-            num2 = float(user_tokens[2])
+            try:
+                num2 = float(user_tokens[2])
+            except ValueError:
+                print("Not a valid input. Enter numbers.")
+                continue
             print sym(num1, num2)
 
         else:
