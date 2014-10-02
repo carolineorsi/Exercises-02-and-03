@@ -29,10 +29,13 @@ def main():
             print("Not a valid input. Enter numbers.")
             continue
 
-        if len(user_tokens) == 2 and (user_tokens[0] == "square" or user_tokens[0] == "cube"):
-            print sym(num1)            
+        if (user_tokens[0] == "square" or user_tokens[0] == "cube"):
+            if len(user_tokens) != 2:
+                print "This function requires 1 input."
+            else:    
+                print sym(num1)            
 
-        elif len(user_tokens) >= 3:
+        else:
             input_list = []
             for item in user_tokens[1:]:
                 try:
